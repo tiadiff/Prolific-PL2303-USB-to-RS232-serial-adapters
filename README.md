@@ -49,10 +49,10 @@ The driver uses a mixed-language approach:
 
 ## (OPTIONAL) - Official drivers finally found:
 
-* https://www.prolific.com.tw/en/portfolio-item/pl2303gt/ - (NOT TESTED)
-* https://plugable.com/pages/prolific-drivers?srsltid=AfmBOoruWUZnZ7xaRd7toDLv2mZ8XvDf6I47LrPpQO6wtb7PQdzghEF3 - (NOT TESTED)
-* https://www.startech.com/en-us/cards-adapters/icusb232v2#heading-driver-and-downloads - (NOT TESTED)
-* http://support.dlink.com.au/Download/download.aspx?product=DGS-3630-52TC - (NOT TESTED)
+- (NOT TESTED) - https://www.prolific.com.tw/en/portfolio-item/pl2303gt/
+- (NOT TESTED) - https://plugable.com/pages/prolific-drivers?srsltid=AfmBOoruWUZnZ7xaRd7toDLv2mZ8XvDf6I47LrPpQO6wtb7PQdzghEF3
+- (NOT TESTED) - https://www.startech.com/en-us/cards-adapters/icusb232v2#heading-driver-and-downloads
+- (NOT TESTED) - http://support.dlink.com.au/Download/download.aspx?product=DGS-3630-52TC 
 
 ## ⚖️ License
 
