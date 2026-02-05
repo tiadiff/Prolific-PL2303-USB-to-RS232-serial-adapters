@@ -2,8 +2,6 @@
 
 A native, **Driverless** solution for connecting Prolific PL2303 USB-to-Serial adapters on modern macOS versions (Sequoia 15+).
 
-![PL2303Term Screenshot](https://via.placeholder.com/800x400?text=PL2303Term+App+Screenshot)
-
 ## 🚀 The Problem
 
 On macOS 15, the legacy kernel extensions (`.kext`) for Prolific PL2303 chips are deprecated or entirely blocked. Users often find that plugging in their device results in... nothing. No `/dev/cu.usbserial` appears, and official drivers fail to load.
