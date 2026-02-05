@@ -1,0 +1,20 @@
+
+# Xcode
+.DS_Store
+*.swp
+*.lock
+build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.os_build
+*.os_index
+*.pbfiles
+*.pbobjects
+*.pbglobals
+*.pbxuser
+*.framedwork
+*.app

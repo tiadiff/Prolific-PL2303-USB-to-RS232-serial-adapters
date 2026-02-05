@@ -1,0 +1,79 @@
+Building for debugging...
+[0/4] Write swift-version--58304C5D6DBC2206.txt
+[2/6] Emitting module PL2303Term
+[3/6] Compiling PL2303Term SerialConnection.swift
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:53:12: [1;31merror: [1;39mmain actor-isolated property 'fileDescriptor' can not be referenced from a nonisolated context[0;0m
+ [0;36m36 |[0;0m     
+ [0;36m37 |[0;0m     // POSIX State
+ [0;36m38 |[0;0m     private var fileDescriptor: Int32 = -1
+    [0;36m|[0;0m                 `- [1;39mnote: [1;39mproperty declared here[0;0m
+ [0;36m39 |[0;0m     private var readTask: Task<Void, Never>?
+ [0;36m40 |[0;0m     
+    [0;36m:[0;0m
+ [0;36m51 |[0;0m         // But invalidating state on deallocated object is pointless.
+ [0;36m52 |[0;0m         // Just strictly close resources.
+ [0;36m53 |[0;0m         if fileDescriptor != -1 {
+    [0;36m|[0;0m            `- [1;31merror: [1;39mmain actor-isolated property 'fileDescriptor' can not be referenced from a nonisolated context[0;0m
+ [0;36m54 |[0;0m             close(fileDescriptor)
+ [0;36m55 |[0;0m         }
+
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:54:19: [1;31merror: [1;39mmain actor-isolated property 'fileDescriptor' can not be referenced from a nonisolated context[0;0m
+ [0;36m36 |[0;0m     
+ [0;36m37 |[0;0m     // POSIX State
+ [0;36m38 |[0;0m     private var fileDescriptor: Int32 = -1
+    [0;36m|[0;0m                 `- [1;39mnote: [1;39mproperty declared here[0;0m
+ [0;36m39 |[0;0m     private var readTask: Task<Void, Never>?
+ [0;36m40 |[0;0m     
+    [0;36m:[0;0m
+ [0;36m52 |[0;0m         // Just strictly close resources.
+ [0;36m53 |[0;0m         if fileDescriptor != -1 {
+ [0;36m54 |[0;0m             close(fileDescriptor)
+    [0;36m|[0;0m                   `- [1;31merror: [1;39mmain actor-isolated property 'fileDescriptor' can not be referenced from a nonisolated context[0;0m
+ [0;36m55 |[0;0m         }
+ [0;36m56 |[0;0m         driver?.disconnect()
+
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:56:9: [1;31merror: [1;39mmain actor-isolated property 'driver' can not be referenced from a nonisolated context[0;0m
+ [0;36m40 |[0;0m     
+ [0;36m41 |[0;0m     // Driver State
+ [0;36m42 |[0;0m     private var driver: PL2303Driver?
+    [0;36m|[0;0m                 `- [1;39mnote: [1;39mproperty declared here[0;0m
+ [0;36m43 |[0;0m     
+ [0;36m44 |[0;0m     init() {}
+    [0;36m:[0;0m
+ [0;36m54 |[0;0m             close(fileDescriptor)
+ [0;36m55 |[0;0m         }
+ [0;36m56 |[0;0m         driver?.disconnect()
+    [0;36m|[0;0m         `- [1;31merror: [1;39mmain actor-isolated property 'driver' can not be referenced from a nonisolated context[0;0m
+ [0;36m57 |[0;0m         readTask?.cancel()
+ [0;36m58 |[0;0m         print("SerialConnection Deinit")
+
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:57:9: [1;31merror: [1;39mmain actor-isolated property 'readTask' can not be referenced from a nonisolated context[0;0m
+ [0;36m37 |[0;0m     // POSIX State
+ [0;36m38 |[0;0m     private var fileDescriptor: Int32 = -1
+ [0;36m39 |[0;0m     private var readTask: Task<Void, Never>?
+    [0;36m|[0;0m                 `- [1;39mnote: [1;39mproperty declared here[0;0m
+ [0;36m40 |[0;0m     
+ [0;36m41 |[0;0m     // Driver State
+    [0;36m:[0;0m
+ [0;36m55 |[0;0m         }
+ [0;36m56 |[0;0m         driver?.disconnect()
+ [0;36m57 |[0;0m         readTask?.cancel()
+    [0;36m|[0;0m         `- [1;31merror: [1;39mmain actor-isolated property 'readTask' can not be referenced from a nonisolated context[0;0m
+ [0;36m58 |[0;0m         print("SerialConnection Deinit")
+ [0;36m59 |[0;0m     }
+
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:111:22: [1;33mwarning: [1;39minitialization of immutable value 'vendor' was never used; consider replacing with assignment to '_' or removing it[0;0m [#no-usage]
+[0;36m109 |[0;0m                 defer { IOObjectRelease(service) }
+[0;36m110 |[0;0m                 
+[0;36m111 |[0;0m                  let vendor = getRegistryInt(service, key: "idVendor") ?? 0
+    [0;36m|[0;0m                      `- [1;33mwarning: [1;39minitialization of immutable value 'vendor' was never used; consider replacing with assignment to '_' or removing it[0;0m [#no-usage]
+[0;36m112 |[0;0m                  let pid = getRegistryInt(service, key: "idProduct") ?? 0
+[0;36m113 |[0;0m                  let serial = getRegistryString(service, key: "USB Serial Number") ?? "Unknown"
+
+/Users/tiadiff/Locale/sviluppo-xcode/fork-PL2303/PL2303Term/Sources/PL2303Term/SerialConnection.swift:157:9: [1;33mwarning: [1;39mresult of call to 'fcntl' is unused[0;0m [#no-usage]
+[0;36m155 |[0;0m         var flags = fcntl(fd, F_GETFL)
+[0;36m156 |[0;0m         flags &= ~O_NONBLOCK
+[0;36m157 |[0;0m         fcntl(fd, F_SETFL, flags)
+    [0;36m|[0;0m         `- [1;33mwarning: [1;39mresult of call to 'fcntl' is unused[0;0m [#no-usage]
+[0;36m158 |[0;0m         
+[0;36m159 |[0;0m         self.fileDescriptor = fd
