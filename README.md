@@ -4,13 +4,13 @@ A native, **Driverless** solution for connecting Prolific PL2303 USB-to-Serial a
 
 ## 🚀 The Problem
 
-On macOS 15, the legacy kernel extensions (`.kext`) for Prolific PL2303 chips are deprecated or entirely blocked. 
-Users often find that plugging in their device results in... nothing. 
+On macOS 15, the legacy kernel extensions (`.kext`) for Prolific PL2303 chips are deprecated or entirely blocked. <br>
+Users often find that plugging in their device results in... nothing. <br><br>
 No `/dev/cu.usbserial` appears, and official drivers fail to load.
 
 ## 🛠 The Solution
 
-This repository contains **PL2303Term**, a Swift application that implements a custom **User-Space Driver**. 
+This repository contains **PL2303Term**, a Swift application that implements a custom **User-Space Driver**. <br><br>
 Instead of relying on a kernel driver to create a virtual serial port, this app communicates directly with the USB device using `IOKit` and raw USB commands.
 
 ### Key Features
