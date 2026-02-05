@@ -47,6 +47,13 @@ The driver uses a mixed-language approach:
 *   **Vendor ID**: `0x067B` (Prolific Technology, Inc.)
 *   **Product ID**: `0x2303` / `0x23C3` (Common PL2303 variants)
 
+## (OPTIONAL) - Official drivers finally found:
+
+* https://www.prolific.com.tw/en/portfolio-item/pl2303gt/
+* https://plugable.com/pages/prolific-drivers?srsltid=AfmBOoruWUZnZ7xaRd7toDLv2mZ8XvDf6I47LrPpQO6wtb7PQdzghEF3
+* https://www.startech.com/en-us/cards-adapters/icusb232v2#heading-driver-and-downloads
+* http://support.dlink.com.au/Download/download.aspx?product=DGS-3630-52TC
+
 ## ⚖️ License
 
 MIT License. Feel free to fork and improve!
