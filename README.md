@@ -1,4 +1,4 @@
-# Prolific PL2303 USB-to-Serial Driver for macOS 15+
+# Prolific PL2303 USB-to-Serial Driver
 
 A native, **Driverless** solution for connecting Prolific PL2303 USB-to-Serial adapters on modern macOS versions (Sequoia 15+).
 
